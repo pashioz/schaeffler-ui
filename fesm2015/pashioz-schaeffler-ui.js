@@ -1,4 +1,5 @@
 import { ɵɵdefineInjectable, Injectable, Component, NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 class SchaefflerUiService {
     constructor() { }
@@ -11,30 +12,30 @@ SchaefflerUiService.decorators = [
 ];
 SchaefflerUiService.ctorParameters = () => [];
 
-class SchaefflerUiComponent {
+class SuiSectionComponent {
     constructor() { }
     ngOnInit() {
     }
 }
-SchaefflerUiComponent.decorators = [
+SuiSectionComponent.decorators = [
     { type: Component, args: [{
-                selector: 'lib-schaeffler-ui',
-                template: `
-    <p>
-      schaeffler-ui works!
-    </p>
-  `
+                selector: 'sui-section',
+                template: "<div class=\"sui-section\">\n  <div class=\"sui-section__container\">\n    <h1>Section</h1>\n    <p>sui-section</p>\n  </div>\n</div>\n",
+                styles: [".sui-section{background-color:#888;box-sizing:border-box;padding:2rem;width:100%}.sui-section__container{background-color:#c2c3c4;box-sizing:border-box;max-width:1280px;padding:1rem}"]
             },] }
 ];
-SchaefflerUiComponent.ctorParameters = () => [];
+SuiSectionComponent.ctorParameters = () => [];
 
-class SchaefflerUiModule {
+class SuiSectionModule {
 }
-SchaefflerUiModule.decorators = [
+SuiSectionModule.decorators = [
     { type: NgModule, args: [{
-                declarations: [SchaefflerUiComponent],
-                imports: [],
-                exports: [SchaefflerUiComponent]
+                declarations: [
+                    SuiSectionComponent
+                ],
+                imports: [
+                    CommonModule
+                ]
             },] }
 ];
 
@@ -46,5 +47,5 @@ SchaefflerUiModule.decorators = [
  * Generated bundle index. Do not edit.
  */
 
-export { SchaefflerUiComponent, SchaefflerUiModule, SchaefflerUiService };
+export { SchaefflerUiService, SuiSectionComponent, SuiSectionModule };
 //# sourceMappingURL=pashioz-schaeffler-ui.js.map

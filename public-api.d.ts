@@ -1,3 +1,3 @@
 export * from './lib/schaeffler-ui.service';
-export * from './lib/schaeffler-ui.component';
-export * from './lib/schaeffler-ui.module';
+export * from './lib/sui-section/sui-section.component';
+export * from './lib/sui-section/sui-section.module';

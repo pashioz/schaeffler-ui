@@ -1,5 +1,5 @@
 import { OnInit } from '@angular/core';
-export declare class SchaefflerUiComponent implements OnInit {
+export declare class SuiSectionComponent implements OnInit {
     constructor();
     ngOnInit(): void;
 }

@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core')) :
-    typeof define === 'function' && define.amd ? define('@pashioz/schaeffler-ui', ['exports', '@angular/core'], factory) :
-    (global = global || self, factory((global.pashioz = global.pashioz || {}, global.pashioz['schaeffler-ui'] = {}), global.ng.core));
-}(this, (function (exports, i0) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common')) :
+    typeof define === 'function' && define.amd ? define('@pashioz/schaeffler-ui', ['exports', '@angular/core', '@angular/common'], factory) :
+    (global = global || self, factory((global.pashioz = global.pashioz || {}, global.pashioz['schaeffler-ui'] = {}), global.ng.core, global.ng.common));
+}(this, (function (exports, i0, common) { 'use strict';
 
     var SchaefflerUiService = /** @class */ (function () {
         function SchaefflerUiService() {
@@ -17,31 +17,35 @@
     ];
     SchaefflerUiService.ctorParameters = function () { return []; };
 
-    var SchaefflerUiComponent = /** @class */ (function () {
-        function SchaefflerUiComponent() {
+    var SuiSectionComponent = /** @class */ (function () {
+        function SuiSectionComponent() {
         }
-        SchaefflerUiComponent.prototype.ngOnInit = function () {
+        SuiSectionComponent.prototype.ngOnInit = function () {
         };
-        return SchaefflerUiComponent;
+        return SuiSectionComponent;
     }());
-    SchaefflerUiComponent.decorators = [
+    SuiSectionComponent.decorators = [
         { type: i0.Component, args: [{
-                    selector: 'lib-schaeffler-ui',
-                    template: "\n    <p>\n      schaeffler-ui works!\n    </p>\n  "
+                    selector: 'sui-section',
+                    template: "<div class=\"sui-section\">\n  <div class=\"sui-section__container\">\n    <h1>Section</h1>\n    <p>sui-section</p>\n  </div>\n</div>\n",
+                    styles: [".sui-section{background-color:#888;box-sizing:border-box;padding:2rem;width:100%}.sui-section__container{background-color:#c2c3c4;box-sizing:border-box;max-width:1280px;padding:1rem}"]
                 },] }
     ];
-    SchaefflerUiComponent.ctorParameters = function () { return []; };
+    SuiSectionComponent.ctorParameters = function () { return []; };
 
-    var SchaefflerUiModule = /** @class */ (function () {
-        function SchaefflerUiModule() {
+    var SuiSectionModule = /** @class */ (function () {
+        function SuiSectionModule() {
         }
-        return SchaefflerUiModule;
+        return SuiSectionModule;
     }());
-    SchaefflerUiModule.decorators = [
+    SuiSectionModule.decorators = [
         { type: i0.NgModule, args: [{
-                    declarations: [SchaefflerUiComponent],
-                    imports: [],
-                    exports: [SchaefflerUiComponent]
+                    declarations: [
+                        SuiSectionComponent
+                    ],
+                    imports: [
+                        common.CommonModule
+                    ]
                 },] }
     ];
 
@@ -53,9 +57,9 @@
      * Generated bundle index. Do not edit.
      */
 
-    exports.SchaefflerUiComponent = SchaefflerUiComponent;
-    exports.SchaefflerUiModule = SchaefflerUiModule;
     exports.SchaefflerUiService = SchaefflerUiService;
+    exports.SuiSectionComponent = SuiSectionComponent;
+    exports.SuiSectionModule = SuiSectionModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
