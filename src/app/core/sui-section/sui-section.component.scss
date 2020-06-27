@@ -1,0 +1,16 @@
+.sui-section {
+  box-sizing: border-box;
+
+  padding: 2rem;
+  width: 100%;
+  background-color: #888888;
+
+  &__container {
+    box-sizing: border-box;
+
+    max-width: 1024px;
+    padding: 1rem;
+    margin: 0 auto;
+    background-color: #c2c3c4;
+  }
+}
