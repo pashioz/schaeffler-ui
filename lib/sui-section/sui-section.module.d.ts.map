@@ -1,0 +1,1 @@
+{"version":3,"file":"sui-section.module.d.ts","sources":["sui-section.module.d.ts"],"names":[],"mappings":";;;;;AAAA;;;AACA","sourcesContent":["export declare class SuiSectionModule {\n}\n"]}
